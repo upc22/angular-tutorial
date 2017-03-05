@@ -1,0 +1,10 @@
+<div class="sidebar">
+  <h3>Content</h3>
+  <ul class="nav nav-pills nav-stacked">
+    <li *ngFor="let nav of navList | keys" routerLinkActive="active" class="nav-item">
+      <a [routerLink]="nav.path">
+        {{nav.name}}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs">
+  <li *ngFor="let menu of submenu" role="presentation" routerLinkActive="active">
+    <a [routerLink]="menu.path">{{menu.name}}</a>
+  </li>
+</ul>
