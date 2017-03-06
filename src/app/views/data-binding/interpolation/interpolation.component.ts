@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FileReadService } from "../../../shared/services/file-read.service";
 
-
+// start
 @Component({
   selector: 'app-interpolation',
   templateUrl: './interpolation.component.html',
@@ -9,15 +9,15 @@ import { FileReadService } from "../../../shared/services/file-read.service";
 })
 export class InterpolationComponent implements OnInit{
   firstName: string = 'Vidit';
-  lastName: string = 'Shah';
-  tsFileContent: string;
+  lastName: string = 'Shah';  
+// end
+tsFileContent: string;
   htmlFileContent: string;
-
   constructor(private _fileReadService: FileReadService){
     
   }
   ngOnInit(){
-    this._fileReadService.getFileContents('src/app/views/data-binding/interpolation/interpolation.component.ts').subscribe(tsFileContent => this.tsFileContent = tsFileContent);
-    this._fileReadService.getFileContents('src/app/views/data-binding/interpolation/interpolation.component.html').subscribe(htmlFileContent => this.htmlFileContent = htmlFileContent);
+    this._fileReadService.getFileContents('src/app/views/data-binding/interpolation/interpolation.component.ts').subscribe(tsFileContent => this.tsFileContent = this._fileReadService.trimContent(tsFileContent,FileReadService.TS));
+    this._fileReadService.getFileContents('src/app/views/data-binding/interpolation/interpolation.component.html').subscribe(htmlFileContent => this.htmlFileContent = this._fileReadService.trimContent(htmlFileContent,FileReadService.HTML));
   }
 }
