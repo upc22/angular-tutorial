@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FileReadService } from "../../../shared/services/file-read.service";
 
-// start
 @Component({
   selector: 'app-interpolation',
   templateUrl: './interpolation.component.html',
   styleUrls: ['./interpolation.component.scss'],
 })
+
+// start
 export class InterpolationComponent implements OnInit{
   firstName: string = 'Vidit';
   lastName: string = 'Shah';  
