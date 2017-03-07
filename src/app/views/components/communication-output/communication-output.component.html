@@ -1,24 +1,31 @@
 <div class="panel panel-default panel-without-top">
     <div class="panel-body">
-        The other type of one-way binding is Property Binding.
+
+        <p>{{componentOneDes}}</p>
         <div class="panel panel-default">
-            <div class="panel-heading">TS</div>
-            <div class="panel-body" [innerText]='tsFileContent'></div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">HTML</div>
-            <div class="panel-body" [innerText]='htmlFileContent'></div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">Output</div>
+            <div class="panel-heading">components/communication-output/communication-output.component.html</div>
             <div class="panel-body">
-                <!--start-->
-                <input type="text" [(ngModel)]='firstName'>
-                <input type="text" [(ngModel)]='lastName'>
-                <p> First Name : <span [innerText]='firstName' [style.fontWeight]='fontWeight'></span></p>
-                <p> Last Name : <span [innerText]='lastName' [style.fontWeight]='fontWeight'></span></p>
-                <!--end-->
+                <pre [innerText]='parentFileContent'></pre>
             </div>
+        </div>
+        <p>{{componentTwoDes}}</p>
+        <div class="panel panel-default">
+            <div class="panel-heading">components/communication-output/output-child.component.ts</div>
+            <div class="panel-body">
+                <pre [innerText]='childFileContent'></pre>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">OUTPUT</div>
+            <!--start-->
+            <div class="panel-body">
+                <h2>What was the difficulty level of modules to work upon?</h2>
+                <h3>Easy: {{easy}}, Mediocre: {{mediocre}}, Difficult:{{difficult}}</h3>
+                <output-child-component *ngFor="let route of routes | keys" [route]="route" (onVoted)="onVoted($event)">
+                </output-child-component>
+            </div>
+            <!--end-->
         </div>
     </div>
 </div>

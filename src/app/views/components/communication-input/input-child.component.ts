@@ -3,10 +3,8 @@ import { Component,Input } from '@angular/core';
 
 @Component({
     selector: 'input-child-component',
-    template: `
+    template: " <p> {{route.name}} is a Route of {{tutorial}}.</p>"
             
-            <p> {{route.name}} is a Route of {{tutorial}}.</p>
-            `
     
 }) export class InputChildComponent{
      @Input() route:{};
