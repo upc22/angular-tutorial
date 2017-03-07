@@ -8,7 +8,10 @@ import { TemplateDriven } from './template-driven'
   styleUrls: ['./template-driven.component.scss']
 })
 export class TemplateDrivenComponent {
-
+ username="Uttam";
+  onSubmit(formData){
+      console.log(formData);
+  }
  
 
 }
