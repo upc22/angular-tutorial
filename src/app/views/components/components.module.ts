@@ -13,7 +13,10 @@ import { CommunicationOutputComponent } from './communication-output/communicati
 import { Communication2WayComponent } from './communication-2-way/communication-2-way.component';
 
 import { MultipleChildComponent } from './multiple/multiple-child.component';
-//import { InputChildComponent } from './communication-input/input-child.component';
+import { InputChildComponent } from './communication-input/input-child.component';
+import { OutputChildComponent } from './communication-output/output-child.component';
+import { IOChildComponent } from './communication-2-way/2-way-child.component';
+
 
 @NgModule({
   imports: [
@@ -22,7 +25,7 @@ import { MultipleChildComponent } from './multiple/multiple-child.component';
     ComponentsRoutingModule
   ],
   declarations: [HomeComponent, MultipleComponent, CommunicationInputComponent, CommunicationOutputComponent, Communication2WayComponent,
-   MultipleChildComponent]
+   MultipleChildComponent,InputChildComponent,OutputChildComponent,IOChildComponent]
 })
 export class ComponentsModule { }
 // end

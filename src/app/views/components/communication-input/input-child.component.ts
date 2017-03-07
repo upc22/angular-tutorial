@@ -1,11 +1,15 @@
 // start
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
-    selector: 'child-component',
-    template: '<p>This is Child Component</p>',
+    selector: 'input-child-component',
+    template: `
+            
+            <p> {{route.name}} is a Route of {{tutorial}}.</p>
+            `
     
 }) export class InputChildComponent{
-    
+     @Input() route:{};
+     @Input() tutorial: string;
 }
 // end
