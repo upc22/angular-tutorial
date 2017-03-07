@@ -1,0 +1,22 @@
+<div class="panel panel-default panel-without-top">
+  <div class="panel-body">
+    The other type of one-way binding is Property Binding.
+    <div class="panel panel-default">
+      <div class="panel-heading">TS</div>
+      <div class="panel-body" [innerText]='tsFileContent'></div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">HTML</div>
+      <div class="panel-body" [innerText]='htmlFileContent'></div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Output</div>
+      <div class="panel-body">
+        <!--start-->
+        <p> First Name : <span [innerText]='firstName' [style.fontWeight]='fontWeight'></span></p>
+        <p> Last Name : <span [innerText]='lastName' [style.fontWeight]='fontWeight'></span></p>
+        <!--end-->
+      </div>
+    </div>
+  </div>
+</div>

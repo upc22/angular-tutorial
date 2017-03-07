@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  title = 'Data Binding';
+  submenu = [{
+    name: 'Interpolation',
+    path: 'inter'
+  }, {
+    name: 'Property Binding',
+    path: 'prop'
+  }, {
+    name: 'Event Binding',
+    path: 'evt'
+  }, {
+    name: 'Two Way Binding',
+    path: '2way'
+  }];
   constructor() { }
 
   ngOnInit() {

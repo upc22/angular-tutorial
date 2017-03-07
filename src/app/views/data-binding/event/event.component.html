@@ -1,0 +1,23 @@
+<div class="panel panel-default panel-without-top">
+  <div class="panel-body">
+    Event Binding binds elements to standard js events. Also we can bind them to custom events.
+    <div class="panel panel-default">
+      <div class="panel-heading">TS</div>
+      <div class="panel-body" [innerText]='tsFileContent'></div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">HTML</div>
+      <div class="panel-body" [innerText]='htmlFileContent'></div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Output</div>
+      <div class="panel-body">
+        <!--start-->
+        <button class="btn btn-primary" (click)='onClick()'>Show Name</button>
+        <p> First Name : <span [innerText]='firstName' [style.fontWeight]='fontWeight'></span></p>
+        <p> Last Name : <span [innerText]='lastName' [style.fontWeight]='fontWeight'></span></p>
+        <!--end-->
+      </div>
+    </div>
+  </div>
+</div>
